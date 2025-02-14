@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/users.css' %}">
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <div class="container">
+        {% for user in users %}
+            <div class="card">
+                <img src="{{ user.photo }}" alt="Foto de {{ user.name }}">
+                <div class="card-content">
+                    <p class="name">{{ user.name }}</p>
+                    <div class="info">
+                        <p><strong>ID:</strong> {{ user.id }}</p>
+                        <p><strong>Age:</strong> {{ user.age }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No hay usuarios disponibles.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
