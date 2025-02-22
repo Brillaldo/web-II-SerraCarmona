@@ -54,3 +54,6 @@ def indexOrders(request):
 
 def paymentsByOrder(request):
     return render(request, 'orders/payments.html')
+
+def ordersIndex(request):
+    return render(request,"orders/index.html")

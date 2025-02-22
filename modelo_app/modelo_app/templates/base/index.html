@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main>
+        <div class="container">
+            {% block content %}
+            <h1>Pagina Principal</h1>
+            <p>Practica 5</p>
+            
+            {% endblock %}
+        </div>
+    </main>
+    {% include 'base/footer.html' %}
+</body>
+</html>

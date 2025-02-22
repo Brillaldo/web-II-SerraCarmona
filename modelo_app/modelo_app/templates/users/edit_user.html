@@ -1,0 +1,56 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/edit_user.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Editar Usuario</h1>
+<form method="POST" action="{% url 'update_user' user.id %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" value="{{ user.name }}" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ user.email }}" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" value="{{ user.age }}" required>
+    </div>
+    <div class="form-group">
+        <label for="rfc">RFC:</label>
+        <input type="text" id="rfc" name="rfc" value="{{ user.rfc }}" required>
+    </div>
+    <div class="form-group">
+        <label for="photo">URL de la Foto:</label>
+        <input type="text" id="photo" name="photo" value="{{ user.photo }}" required>
+    </div>
+    <button type="submit">Actualizar</button>
+</form>
+<h2>Direcciones</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Calle</th>
+            <th>Ciudad</th>
+            <th>Estado</th>
+            <th>CP</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for address in user.addresses.all %}
+        <tr>
+            <td>{{ address.street }}</td>
+            <td>{{ address.city }}</td>
+            <td>{{ address.state }}</td>
+            <td>{{ address.zipcode }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

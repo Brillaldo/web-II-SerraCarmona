@@ -1,0 +1,13 @@
+<div class="card">
+    <img src="{{ photo }}" alt="Foto de {{ name }}">
+    <div class="card-content">
+        <p class="name">{{ name }}</p>
+        <div class="info">
+            <p><strong>ID:</strong> {{ id }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+        </div>
+        <div class="actions">
+            <button onclick="window.location.href='{% url 'edit_user' id %}'">Ver</button>
+        </div>
+    </div>
+</div>
