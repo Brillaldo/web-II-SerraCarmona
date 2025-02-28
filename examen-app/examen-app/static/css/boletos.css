@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.boleto-item {
+    text-align: center;
+    margin-bottom: 2cm; /* Reduce el espacio entre los boletos */
+}
+
+.boleto-item img {
+    width: 100%;
+    max-width: 200px; /* Tamaño más grande para las imágenes */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Reduce el espacio debajo de la imagen */
+}
+
+.boleto-item p {
+    margin-bottom: 5px; /* Reduce el espacio entre los párrafos */
+}
+
+.boleto-item .btn-detalle {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #353535; /* Color gris */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    .boleto-item .btn-detalle {
+        background: #525252 !important;
+    }
+    
+}
+
+.boleto-item .btn-detalle:hover {
+    background: #606060; /* Color gris oscuro al pasar el cursor */
+}
+
+.boletos-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-gap: 2cm; /* Reduce el espacio entre los elementos */
+}
+
+.evento-item {
+    text-align: center;
+    margin-bottom: 2cm; /* Reduce el espacio entre los eventos */
+}
+
+.evento-item img {
+    width: 100%;
+    max-width: 200px; /* Tamaño más grande para las imágenes */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Reduce el espacio debajo de la imagen */
+}
+
+.evento-item p {
+    margin-bottom: 5px; /* Reduce el espacio entre los párrafos */
+}
+
+.eventos-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-gap: 2cm; /* Reduce el espacio entre los elementos */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #007BFF;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}

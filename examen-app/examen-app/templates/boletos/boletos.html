@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{% static 'css/boletos.css' %}">
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main>
+        <div class="container">
+            <h1>{{ titulo }}</h1>
+            <!-- <p>Total de Boletos: {{ total_boletos }}</p>
+            <p>Total de Eventos: {{ total_eventos }}</p> -->
+            <div class="boletos-list">
+                {% for boleto in boletos %}
+                    <div class="boleto-item">
+                        <img src="{% static 'images/boletos.jpg' %}" alt="Imagen de Boleto">
+                        <h2>{{ boleto.name }}</h2>
+                        <p>Fecha: {{ boleto.fecha }}</p>
+                        <p>Precio: ${{ boleto.precio }}</p>
+                        <button class="btn-detalle">Comprar</button> <!-- Botón debajo del precio -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    {% include 'base/footer.html' %}
+</body>
+</html>

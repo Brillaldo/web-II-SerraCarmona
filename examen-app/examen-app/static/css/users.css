@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 4px; /* Espacio extra debajo del h1 */
+}
+
+/* Contenedor con cuadrícula */
+.container {
+    max-width: 1200px;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 20px;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Esto asegurará que las tarjetas se centren */
+    align-items: flex-start;
+}
+
+
+/* Tarjetas */
+.card {
+    flex: 1 1 300px;  /* Esto define un ancho mínimo en lugar de un porcentaje */
+    max-width: 320px; /* Limita el crecimiento */
+    display: flex;
+    flex-direction: column; /* Evita que los elementos internos se alineen en fila */
+    align-items: center; /* Centra el contenido dentro de cada tarjeta */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Imágenes */
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px; /* En lugar de margin-right */
+    object-fit: cover;
+}
+
+
+/* Contenido dentro de la tarjeta */
+.card-content {
+    flex: 1;
+}
+
+/* Nombre del usuario */
+.card-content .name {
+    font-size: 1.5em;
+    margin: 0;
+    color: #007BFF;
+}
+
+/* Estilo de ID y Edad */
+.card-content .info {
+    margin-top: 10px;
+}
+
+.card-content .info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Acciones */
+.card-content .actions {
+    margin-top: 10px;
+}
+
+.card-content .actions button {
+    background-color: #b300ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-content .actions button:hover {
+    background-color: #b300ad;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
