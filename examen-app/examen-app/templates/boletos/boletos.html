@@ -12,19 +12,21 @@
     <main>
         <div class="container">
             <h1>{{ titulo }}</h1>
-            <!-- <p>Total de Boletos: {{ total_boletos }}</p>
-            <p>Total de Eventos: {{ total_eventos }}</p> -->
-            <div class="boletos-list">
-                {% for boleto in boletos %}
-                    <div class="boleto-item">
-                        <img src="{% static 'images/boletos.jpg' %}" alt="Imagen de Boleto">
-                        <h2>{{ boleto.name }}</h2>
-                        <p>Fecha: {{ boleto.fecha }}</p>
-                        <p>Precio: ${{ boleto.precio }}</p>
-                        <button class="btn-detalle">Comprar</button> <!-- Botón debajo del precio -->
-                    </div>
-                {% endfor %}
-            </div>
+            {% if boletos %}
+                <div class="boletos-list">
+                    {% for boleto in boletos %}
+                        <div class="boleto-item">
+                            <img src="{% static 'images/boletos.jpg' %}" alt="Imagen de Boleto">
+                            <h2>{{ boleto.name }}</h2>
+                            <p>Fecha: {{ boleto.fecha }}</p>
+                            <p>Precio: ${{ boleto.precio }}</p>
+                            <button class="btn-detalle">Comprar</button> <!-- Botón debajo del precio -->
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Sin productos disponibles</p>
+            {% endif %}
         </div>
     </main>
     {% include 'base/footer.html' %}

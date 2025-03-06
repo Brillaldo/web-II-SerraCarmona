@@ -11,8 +11,10 @@
     {% include 'base/header.html' %}
     <main>
         <div class="container">
-            <h1>{{ titulo }}</h1>
-            <!-- <p>Total de Eventos: {{ total_eventos }}</p> -->
+            <h1>Eventos</h1>
+            <div class="btn-agregar-evento-container">
+                <a href="{% url 'agregar_evento' %}" class="btn-agregar-evento">Agregar Evento</a>
+            </div>
 
             <div class="eventos-list">
                 {% for evento in eventos %}
@@ -20,11 +22,9 @@
                         <img src="{% static 'images/eventos.jpg' %}" alt="Imagen de Evento">
                         <div class="evento-info">
                             <h2>{{ evento.name }}</h2>
-                            <p><strong>Localidad:</strong> Barranquilla</p>
-                            <p><strong>Fecha de Inicio:</strong> {{ evento.fecha_inicio }}</p>
-                            <p><strong>Fecha de Fin:</strong> {{ evento.fecha_fin }}</p>
+                            <p><strong>Localidad:</strong> {{ evento.localidad }}</p>
                             <p><strong>Descripción:</strong> Este es un evento de que sacare 10 Profe.</p>
-                            <a href="/examen/boletos" class="btn-boletos">Boletos</a>
+                            <a href="{% url 'boletos_por_evento' evento.id %}" class="btn-boletos">Boletos</a>
                         </div>
                     </div>
                 {% endfor %}

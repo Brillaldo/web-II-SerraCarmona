@@ -15,31 +15,55 @@
         <div class="container">
             {% block content %}
 
-            <!-- Galería de imágenes -->
             <section class="gallery">
-                <div class="image-grid">
-                    <img src="{% static 'images/carnaval.png' %}" alt="Imagen 1">
-                    <img src="{% static 'images/carnaval.png' %}" alt="Imagen 2">
-                    <img src="{% static 'images/carnaval.png' %}" alt="Imagen 3">
-                    <img src="{% static 'images/carnaval.png' %}" alt="Imagen 4">
+                <div class="parent">
+                    <div class="div1"><img src="{% static 'images/carnaval.png' %}" alt="Imagen 1" height="294px" width="425px"></div>
+                    <div class="div2"><img src="{% static 'images/carnaval.png' %}" alt="Imagen 2"height="294px" width="425px"></div>
+                    <div class="div3"><img src="{% static 'images/carnaval.png' %}" alt="Imagen 3"height="294px" width="210px"></div>
+                    <div class="div4"><img src="{% static 'images/carnaval.png' %}" alt="Imagen 4"height="294px" width="210px"></div>
+                    <div class="div5"><img src="{% static 'images/carnaval.png' %}" alt="Imagen 5"height="294px" width="425px"></div>
                 </div>
             </section>
+            <h2 class="news-title">Noticias</h2>
 
-            <!-- Espacio con el título de Noticias -->
-            <h2 class="news-title">NOTICIAS</h2>
-
-            <!-- Sección de noticias -->
             <section class="news">
-                <div class="image-grid">
-                    <img src="{% static 'images/noti.png' %}" alt="Noticia 1">
-                    <img src="{% static 'images/noti.png' %}" alt="Noticia 2">
-                    <img src="{% static 'images/noti.png' %}" alt="Noticia 3">
-                    <img src="{% static 'images/noti.png' %}" alt="Noticia 4">
+                <div class="parent2">
+                    <div class="div1">
+                        <img src="{% static 'images/noti.png' %}" alt="Noticia 1" style="width: 530px; height: 200px;">
+                        <h5><strong>Noticia</strong></h5>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque, officia, modi natus, nobis dolorem praesentium eos</p>
+                    </div>
+                    <div class="div2">
+                        <img src="{% static 'images/noti.png' %}" alt="Noticia 2" style="width: 530px; height: 200px;">
+                        <h5><strong>Noticia</strong></h5>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque, officia, modi natus, nobis dolorem praesentium eos</p>
+                    </div>
+                    <div class="div3">
+                        <img src="{% static 'images/noti.png' %}" alt="Noticia 3" style="width: 37%; height: auto; float: left; margin-right: 10px;">
+                        <h4><strong>Evento #1</strong></h4>
+                        <p><strong>Localidad:</strong> Barranquilla</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque, officia</p>
+                    </div>
+                    <div class="div4">
+                        <img src="{% static 'images/noti.png' %}" alt="Noticia 4" style="width: 37%; height: auto; float: left; margin-right: 10px;">
+                        <h4><strong>Evento #2</strong></h4>
+                        <p><strong>Localidad:</strong> Barranquilla</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque, officia</p>
+                    </div>
+                    <div class="div5">
+                        <img src="{% static 'images/noti.png' %}" alt="Noticia 5" style="width: 37%; height: auto; float: left; margin-right: 10px;">
+                        <h4><strong>Evento #3</strong></h4>
+                        <p><strong>Localidad:</strong> Barranquilla</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque, officia</p>
+                    </div>
                 </div>
             </section>
             
             {% endblock %}
         </div>
+        
     </main>
     {% include 'base/footer.html' %}
 </body>

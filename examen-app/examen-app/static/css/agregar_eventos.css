@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-size: 20px; /* Aumenta el tamaño de fuente base */
+}
+
+.container {
+    max-width: 3000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los divs */
+}
+
+.izquierda, .reglas {
+    width: 48%; /* Ancho de cada columna */
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-size: 2em; /* Aumenta el tamaño de fuente de los encabezados */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input, select {
+    padding: 15px; /* Aumenta el padding para hacer los campos más grandes */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em; /* Aumenta el tamaño de fuente de los campos */
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    width: 150px; /* Aumenta el ancho del botón */
+    padding: 10px; /* Aumenta el padding del botón */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    font-size: 1em; /* Aumenta el tamaño de fuente del botón */
+}
+
+button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em; /* Aumenta el tamaño de fuente de la tabla */
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px; /* Aumenta el padding de las celdas de encabezado */
+    font-size: 1em; /* Aumenta el tamaño de fuente de las celdas de encabezado */
+}
+
+td {
+    text-align: center;
+    padding: 15px; /* Aumenta el padding de las celdas */
+    font-size: 1em; /* Aumenta el tamaño de fuente de las celdas */
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Aumenta el padding del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Aumenta el tamaño de fuente del botón */
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.reglas {
+    background-color: #fff;
+    padding: 15px; /* Aumenta el padding del div de reglas */
+    border-radius: 5px; /* Elimina la propiedad border */
+    font-size: 1em; /* Aumenta el tamaño de fuente del div de reglas */
+}
+
+.reglas h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em; /* Aumenta el tamaño de fuente del encabezado de reglas */
+}
+
+.reglas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reglas ul li {
+    margin-bottom: 10px; /* Aumenta el margen inferior de los elementos de la lista */
+    font-size: 1em; /* Aumenta el tamaño de fuente de los elementos de la lista */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.2em; /* Aumenta el tamaño de fuente del encabezado */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Aumenta el tamaño de fuente del título del encabezado */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em; /* Aumenta el tamaño de fuente de los enlaces de navegación */
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #007BFF;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2em; /* Aumenta el tamaño de fuente del pie de página */
+}
+
+.h2 {
+    text-align: left;
+    font-size: 2em; /* Aumenta el tamaño de fuente del encabezado h2 */
+}
+
+.table{
+    max-width: 3000px;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 1em; /* Aumenta el tamaño de fuente de la tabla */
+}

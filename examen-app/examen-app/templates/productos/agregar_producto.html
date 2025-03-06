@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="{% static 'css/agregar_eventos.css' %}">
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main>
+        <div class="container">
+            <div class="izquierda">
+                <h1>Agregar producto</h1>
+                <form id="producto-form" method="post" action="{% url 'agregar_producto' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Nombre</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_precio">Precio</label>
+                        {{ form.precio }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_localidad">Localidad</label>
+                        {{ form.localidad }}
+                    </div>
+                    <button type="submit" class="btn-agregar-producto">Agregar</button>
+                </form>
+            </div>
+           
+            <div class="reglas">
+                <h3>Reglas</h3>
+                <ul>
+                    <li>Ningún campo debe quedar vacío</li>
+                    <li>Mostrar mensaje de guardado o de error en caso de fallar</li>
+                    <li>La envio de información debe ser por medio del metodo FETCH de JS</li>
+                    <li>el boton "Eliminar" debera de hacerse por medio del metodo FETCH de js</li>
+                    <li>El precio del producto debe ser mayor a 0</li>
+                    <li>Solo se pueden agrega 10 productos por dia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="table">
+            <h2 class="h2">Productos recientemente agregados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Localidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productos-list">
+                    {% for producto in productos %}
+                    <tr id="producto-{{ producto.id }}">
+                        <td>{{ producto.name }}</td>
+                        <td>{{ producto.precio }}</td>
+                        <td>{{ producto.localidad }}</td>
+                        <td>
+                            <button class="btn-eliminar" onclick="eliminarProducto({{ producto.id }})">Eliminar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+    <script src="{% static 'js/productos.js' %}"></script>
+    {% include 'base/footer.html' %}
+</body>
+</html>

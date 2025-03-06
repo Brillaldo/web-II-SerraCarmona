@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Evento</title>
+    <link rel="stylesheet" href="{% static 'css/agregar_eventos.css' %}">
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main>
+        <div class="container">
+            <div class="izquierda">
+                <h1>Agregar Evento</h1>
+                <form id="evento-form" method="post" action="{% url 'agregar_evento' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Nombre</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_fecha_inicio">Fecha de Inicio</label>
+                        {{ form.fecha_inicio }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_fecha_fin">Fecha de Fin</label>
+                        {{ form.fecha_fin }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_localidad">Localidad</label>
+                        {{ form.localidad }}
+                    </div>
+                    <button type="submit" class="btn-agregar-evento">Agregar</button>
+                </form>
+            </div>
+            <div class="reglas">
+                <h3>Reglas</h3>
+                <ul>
+                    <li>Ningún campo debe quedar vacío.</li>
+                    <li>La fecha de fin no puede ser anterior a la fecha de inicio.</li>
+                    <li>La fecha de inicio debe ser posterior al día de hoy.</li>
+                    <li>No puedes agregar dos eventos consecutivos en la misma localidad.</li>
+                    <li>Mostrar mensaje de éxito o error según corresponda.</li>
+                    <li>El envío de información debe realizarse mediante el método FETCH de JavaScript.</li>
+                    <li>El botón "Eliminar" debe funcionar mediante el método FETCH de JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="table">
+            <h2>Eventos recientemente agregados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Fin</th>
+                        <th>Localidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="eventos-list">
+                    {% for evento in eventos %}
+                    <tr id="evento-{{ evento.id }}">
+                        <td>{{ evento.name }}</td>
+                        <td>{{ evento.fecha_inicio }}</td>
+                        <td>{{ evento.fecha_fin }}</td>
+                        <td>{{ evento.localidad }}</td>
+                        <td>
+                            <button class="btn-eliminar" onclick="eliminarEvento({{ evento.id }})">Eliminar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="{% static 'js/eventos.js' %}"></script>
+    {% include 'base/footer.html' %}
+</body>
+</html>
