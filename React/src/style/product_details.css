@@ -1,0 +1,198 @@
+.page-container
+{
+  background-color: white;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-details-page-container
+{
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5% 7%;
+  column-gap: 2rem;
+  background-color: white; /* Ensure white background */
+  width: 80%; /* Adjusted width */
+}
+
+.product-image-container
+{
+  width: 100%;
+  height: 100%;
+}
+
+.product-details-container
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.toast-bar
+{
+  text-align: start;
+  font-size: small;
+  color: gray;
+}
+
+.product-info
+{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.product-info h4
+{
+  margin: 0px;
+  font-size: 2rem;
+}
+
+.product-highlights
+{
+  margin: 0px;
+  text-align: start;
+}
+
+.product-specifications
+{
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  background-color: #f2f4f7;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.product-specifications table, th, td
+{
+  height: 100%;
+  font-size: 15px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.product-specifications table
+{
+  width: 100%;
+}
+
+.product-specifications h5
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px; /* Further reduced font size */
+  height: auto; /* Adjusted height */
+  text-align: center;
+  margin: 0px;
+  padding: 5px; /* Reduced padding for a smaller box */
+}
+
+.product-specifications th
+{
+  color: #9599a0;
+  font-weight: 600;
+  height: auto;
+}
+
+.product-specifications tr
+{
+  color: black;
+  font-weight: 800;
+  font: 20px;
+}
+
+.product-buttons
+{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-to-cart-button 
+{
+  width: 30%;
+  height: 100%;
+
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#added-to-cart-button 
+{
+  width: 30%;
+  height: 100%;
+
+  background-color: gray;
+  color: white;
+  font-weight: 600;
+  font-size: 10px;
+
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#add-to-wishlist-button 
+{
+  
+  background-color: none;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+
+  padding: 10px;
+  border: 1px solid #9599a0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loading-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.spinner
+{
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ccc;
+    border-top-color: blueviolet;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

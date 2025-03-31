@@ -1,0 +1,69 @@
+.img {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page-container {
+    background-color: #121418;
+    min-height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containerLogin {
+    border: 1px black solid;
+    width: 50%;
+    max-width: 400px; /* Limita el ancho máximo para pantallas más grandes */
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #212936;
+    color: white;
+}
+
+.containerLogin h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+}
+
+.formLogin div {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin div input {
+    padding: 15px;
+    width: 85%;
+    margin: auto;
+    background-color: #121418;
+    border: 1px solid #845eee;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    color: white;
+}
+
+.formLogin button {
+    padding: 10px 20px;
+    border: black solid 1px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+    color: white;
+    cursor: pointer;
+}
+
+.formLogin button:hover {
+    transition: 5ms;
+    background: linear-gradient(180deg, #652cd1 0%, #845eee 100%);
+}
