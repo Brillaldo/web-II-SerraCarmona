@@ -1,0 +1,79 @@
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.character-card, .episode-card {
+  background-color: #ffffff;
+  color: #b1b1b1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.character-card:hover, .episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.character-image, .episode-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.character-card h4, .episode-card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.character-card p, .episode-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #8a8a8a;
+}
+
+.character-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.character-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .character-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+}
