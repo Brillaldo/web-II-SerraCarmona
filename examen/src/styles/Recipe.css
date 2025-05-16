@@ -1,0 +1,55 @@
+.recipe-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1b1e2b;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #00000033;
+  color: #fff;
+}
+
+.detail-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffa726;
+  text-align: center;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-meta p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.detail-meta a {
+  color: #81d4fa;
+  text-decoration: underline;
+}
+
+.detail-section {
+  margin-top: 2rem;
+}
+
+.detail-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc80;
+}
+
+.ingredients-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
